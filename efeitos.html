@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>efeito</title>
+    <style>
+        body{
+            width: 100%;
+            height: 100vh;
+            margin: 0px;
+            display: flex;
+            justify-content: center;
+        }
+        .preta  
+        {
+            width: 80%;
+            height: 80px;
+            background-color: black;
+            color: white;
+            position: fixed;
+            border-radius: 0px 0px 30px 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            align-content: center;
+            z-index: 1;
+        }
+        .menu1
+        {
+            width: 100px;
+            height: 300px;
+            background-color: yellow; 
+            position: absolute;
+            left: 275px;
+            top: -210px;
+            z-index: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-content: center;
+            align-items: center;
+            font-family: Georgia;
+        }
+        .menu2
+        {
+            width: 100px;
+            height: 300px;
+            background-color: rgb(0, 68, 255); 
+            position: absolute;
+            left: 680px;
+            top: -210px;
+            z-index: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-content: center;
+            align-items: center;
+            font-family: Georgia;  
+        }
+        .menu3
+        {
+            width: 100px;
+            height: 300px;
+            background-color: rgb(255, 0, 0); 
+            position: absolute;
+            left: 1050px;
+            top: -210px;
+            z-index: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-content: center;
+            align-items: center;
+            font-family: Georgia;  
+        }
+         .opcao:hover  
+          {
+            color: yellow;
+         }
+         .deslizar 
+         {
+        animation: descer  5s forwards;
+         }
+         @keyframes descer 
+        {
+            0% {top: -208px}
+            100% {top: 80px}        
+        }
+    </style>
+</head>
+<body>
+    <div class="preta">
+        <div onclick="Animamenu1();"    class="opcao">MENU 1</div>
+        <div onclick="Animamenu2();"    class="opcao">MENU 2</div>
+        <div onclick="Animamenu3();"    class="opcao">MENU 3</div>
+    </div> 
+
+    <div class="menu1" id="menu1">   
+        <div class="opcao">fusca </div>
+        <div class="opcao">kombi </div>
+        <div class="opcao">caroça </div>
+        <div class="opcao">gol </div>
+        <div class="opcao">ferrari </div>
+        <div class="opcao">brasilia </div>   
+    </div>
+
+    <div class="menu2" id="menu2">   
+        <div class="opcao">fusca </div>
+        <div class="opcao">kombi </div>
+        <div class="opcao">caroça </div>
+        <div class="opcao">gol </div>
+        <div class="opcao">ferrari </div>
+        <div class="opcao">brasilia </div>
+    </div>
+    <div class="menu3" id="menu3">   
+        <div class="opcao">fusca </div>
+        <div class="opcao">kombi </div>
+        <div class="opcao">caroça </div>
+        <div class="opcao">gol </div>
+        <div class="opcao">ferrari </div>
+        <div class="opcao">brasilia </div>
+    </div>
+
+</body>
+    <script>
+        function Animamenu1()
+        {
+            
+            menu1.classList.add ("deslizar");
+            menu2.classList.remove("deslizar");
+            menu3.classList.remove("deslizar");
+        }
+        function Animamenu2()
+        {
+            menu1.classList.remove ("deslizar");
+            menu2.classList.add("deslizar");
+            menu3.classList.remove("deslizar");
+        }
+        function Animamenu3()
+        {
+            menu1.classList.remove ("deslizar");
+            menu2.classList.remove("deslizar");
+            menu3.classList.add("deslizar");
+        }
+    
+    </script>
+
+
+</html>
